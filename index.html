@@ -1,29 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Wild Store</title>
-  <style>
-    body { 
-      display: flex; 
-      justify-content: center; 
-      align-items: center; 
-      height: 100vh; 
-      margin: 0; 
-      background-color: #000; 
-      color: #fff; 
-      font-family: 'Helvetica Neue', Arial, sans-serif; 
-    }
-    h1 { 
-      font-size: 3rem; 
-      letter-spacing: 2px;
-      text-align: center;
-      padding: 20px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wild Store - Coming Soon</title>
+    <!-- Use Google Fonts to get a dense, bold font similar to the poster -->
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            /* Warm Berry Brown Text Color: Hex #763338 */
+            --text-color-berry: rgb(118, 51, 56);
+            /* Cream Background Color: Hex #FFFDD0 */
+            --bg-color-cream: rgb(255, 253, 208);
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color-cream);
+            color: var(--text-color-berry);
+            font-family: 'Anton', sans-serif; /* Applied the dense font */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden; /* Keep the effect contained */
+        }
+
+        .text-container {
+            display: flex;
+            gap: 2vw; /* Use viewport units for scaling distance */
+            justify-content: center;
+            align-items: center;
+            width: 90%;
+            max-width: 1200px;
+        }
+
+        .column {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .stacked-text {
+            font-weight: 700;
+            font-size: 4rem; /* Large base size for desktop */
+            letter-spacing: -2px; /* Tight letter spacing like the poster */
+            line-height: 1.0;
+            margin: 0;
+            text-transform: uppercase; /* Force uppercase */
+        }
+
+        /* Responsive adjustments for different screen sizes */
+        @media (max-width: 1024px) {
+            .stacked-text {
+                font-size: 3rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .text-container {
+                flex-direction: column; /* Stack columns on small screens */
+                gap: 5vh;
+            }
+            .stacked-text {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
 </head>
 <body>
-  <h1>WILD STORE IS COMING</h1>
+    <div class="text-container">
+        <!-- Replicating the multi-column stacked layout -->
+        
+        <!-- Column 1 -->
+        <div class="column">
+            <div class="stacked-text">WILD STORE IS COMING!</div>
+            <div class="stacked-text">WILD STORE IS COMING!</div>
+            <div class="stacked-text">WILD STORE IS COMING!</div>
+            <div class="stacked-text">WILD STORE IS COMING!</div>
+            <div class="stacked-text">WILD STORE IS COMING!</div>
+            <div class="stacked-text">WILD STORE IS COMING!</div>
+            <div class="stacked-text">WILD STORE IS COMING!</div>
+        </div>
+
+        <!-- Column 2 -->
+        <div class="column">
+            <div class="stacked-text">WILD STORE IS COMING!</div>
+            <div class="stacked-text">WILD STORE IS COMING!</div>
+            <div class="stacked-text">WILD STORE IS COMING!</div>
+            <div class="stacked-text">WILD STORE IS COMING!</div>
+            <div class="stacked-text">WILD STORE IS COMING!</div>
+            <div class="stacked-text">WILD STORE IS COMING!</div>
+            <div class="stacked-text">WILD STORE IS COMING!</div>
+        </div>
+
+        <!-- Column 3 -->
+        <div class="column">
+            <div class="stacked-text">WILD STORE IS COMING!</div>
+            <div class="stacked-text">WILD STORE IS COMING!</div>
+            <div class="stacked-text">WILD STORE IS COMING!</div>
+            <div class="stacked-text">WILD STORE IS COMING!</div>
+            <div class="stacked-text">WILD STORE IS COMING!</div>
+            <div class="stacked-text">WILD STORE IS COMING!</div>
+            <div class="stacked-text">WILD STORE IS COMING!</div>
+        </div>
+    </div>
 </body>
 </html>
