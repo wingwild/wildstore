@@ -8,9 +8,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
     <style>
         :root {
-            /* Warm Berry Brown Text Color: Hex #763338 */
+            /* Warm Berry Brown Text Color */
             --text-color-berry: rgb(118, 51, 56);
-            /* Cream Background Color: Hex #FFFDD0 */
+            /* Cream Background Color */
             --bg-color-cream: rgb(255, 253, 208);
         }
 
@@ -19,92 +19,51 @@
             padding: 0;
             background-color: var(--bg-color-cream);
             color: var(--text-color-berry);
-            font-family: 'Anton', sans-serif; /* Applied the dense font */
+            font-family: 'Anton', sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            overflow: hidden; /* Keep the effect contained */
-        }
-
-        .text-container {
-            display: flex;
-            gap: 2vw; /* Use viewport units for scaling distance */
-            justify-content: center;
-            align-items: center;
-            width: 90%;
-            max-width: 1200px;
+            overflow: hidden; /* Prevent scrolling */
         }
 
         .column {
             display: flex;
             flex-direction: column;
             text-align: center;
+            width: 100%; /* Ensure it spans the full width */
         }
 
         .stacked-text {
             font-weight: 700;
-            font-size: 4rem; /* Large base size for desktop */
-            letter-spacing: -2px; /* Tight letter spacing like the poster */
-            line-height: 1.0;
+            /* Using 'vw' makes the text scale perfectly to the width of the screen */
+            font-size: 8vw; 
+            letter-spacing: -2px;
+            line-height: 0.9; /* Keeps the text stacked tightly */
             margin: 0;
-            text-transform: uppercase; /* Force uppercase */
+            text-transform: uppercase;
+            white-space: nowrap; /* Forces the sentence to stay on one row */
         }
 
-        /* Responsive adjustments for different screen sizes */
-        @media (max-width: 1024px) {
-            .stacked-text {
-                font-size: 3rem;
-            }
-        }
-
+        /* Adjustments for mobile screens */
         @media (max-width: 768px) {
-            .text-container {
-                flex-direction: column; /* Stack columns on small screens */
-                gap: 5vh;
-            }
             .stacked-text {
-                font-size: 2.5rem;
+                font-size: 11vw; /* Makes it slightly larger relative to mobile screens */
+                letter-spacing: -1px;
             }
         }
     </style>
 </head>
 <body>
-    <div class="text-container">
-        <!-- Replicating the multi-column stacked layout -->
-        
-        <!-- Column 1 -->
-        <div class="column">
-            <div class="stacked-text">WILD STORE IS COMING!</div>
-            <div class="stacked-text">WILD STORE IS COMING!</div>
-            <div class="stacked-text">WILD STORE IS COMING!</div>
-            <div class="stacked-text">WILD STORE IS COMING!</div>
-            <div class="stacked-text">WILD STORE IS COMING!</div>
-            <div class="stacked-text">WILD STORE IS COMING!</div>
-            <div class="stacked-text">WILD STORE IS COMING!</div>
-        </div>
-
-        <!-- Column 2 -->
-        <div class="column">
-            <div class="stacked-text">WILD STORE IS COMING!</div>
-            <div class="stacked-text">WILD STORE IS COMING!</div>
-            <div class="stacked-text">WILD STORE IS COMING!</div>
-            <div class="stacked-text">WILD STORE IS COMING!</div>
-            <div class="stacked-text">WILD STORE IS COMING!</div>
-            <div class="stacked-text">WILD STORE IS COMING!</div>
-            <div class="stacked-text">WILD STORE IS COMING!</div>
-        </div>
-
-        <!-- Column 3 -->
-        <div class="column">
-            <div class="stacked-text">WILD STORE IS COMING!</div>
-            <div class="stacked-text">WILD STORE IS COMING!</div>
-            <div class="stacked-text">WILD STORE IS COMING!</div>
-            <div class="stacked-text">WILD STORE IS COMING!</div>
-            <div class="stacked-text">WILD STORE IS COMING!</div>
-            <div class="stacked-text">WILD STORE IS COMING!</div>
-            <div class="stacked-text">WILD STORE IS COMING!</div>
-        </div>
+    <!-- Single Column Layout -->
+    <div class="column">
+        <div class="stacked-text">WILD STORE IS COMING!</div>
+        <div class="stacked-text">WILD STORE IS COMING!</div>
+        <div class="stacked-text">WILD STORE IS COMING!</div>
+        <div class="stacked-text">WILD STORE IS COMING!</div>
+        <div class="stacked-text">WILD STORE IS COMING!</div>
+        <div class="stacked-text">WILD STORE IS COMING!</div>
+        <div class="stacked-text">WILD STORE IS COMING!</div>
     </div>
 </body>
 </html>
